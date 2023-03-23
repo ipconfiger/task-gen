@@ -2,7 +2,7 @@
   <div>
     <h1>Jenkins任务生成器</h1>
     <div class="refresh_btn">
-      <var-button type="primary" @click="refresh">刷新生成</var-button>
+      <var-button type="primary">生成</var-button>
     </div>
     <var-card
       title="任务脚本内容"
@@ -89,7 +89,7 @@ export default defineComponent({
           state.result += ' ' + state.tar_ip;
           state.result += ' ' + state.web.base_path;
           state.result += ' ' + state.alias;
-          if (state.web.need_update) {
+          if (!state.web.need_update) {
             state.result += '&& sh /opt/releases-apps2/reboot_web.sh ' + state.tar_ip + ' ' + state.alias;
           }
         } else {
@@ -120,9 +120,4 @@ export default defineComponent({
 
 <style scoped>
 /* Component styles here */
-.refresh_btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-}
 </style>

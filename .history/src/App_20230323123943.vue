@@ -89,7 +89,7 @@ export default defineComponent({
           state.result += ' ' + state.tar_ip;
           state.result += ' ' + state.web.base_path;
           state.result += ' ' + state.alias;
-          if (state.web.need_update) {
+          if (!state.web.need_update) {
             state.result += '&& sh /opt/releases-apps2/reboot_web.sh ' + state.tar_ip + ' ' + state.alias;
           }
         } else {
