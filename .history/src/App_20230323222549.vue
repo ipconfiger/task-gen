@@ -85,11 +85,8 @@ export default defineComponent({
           state.result += ' ' + state.web.src_dir;
           state.result += ' ' + state.git_path;
           state.result += ' ' + state.branch; 
-          if (state.force_clone) {
-            state.result += ' true';
-          } else {
-            state.result += ' false';
-          }
+          if ()
+          state.result += ' ' + state.force_clone ? ' true' : ' false';
           state.result += ' ' + state.tar_ip;
           state.result += ' ' + state.web.base_path;
           state.result += ' ' + state.alias;
@@ -108,15 +105,9 @@ export default defineComponent({
           state.result += ' ' + state.alias;
           state.result += ' ' + state.git_path;
           state.result += ' ' + state.branch;
-          if (state.force_clone) {
-            state.result += ' true';
-          } else {
-            state.result += ' false';
-          }
+          state.result += ' ' + state.force_clone ? ' true' : ' false';
           state.result += ' ' + state.tar_ip;
-          if (state.service.max_mem != '') {
-            state.result += ' ' + state.service.max_mem + 'm';
-          }
+          state.result += ' ' + state.service.max_mem + 'm';
           state.result += ' ' + state.service.port;
           state.result += ' ' + state.service.nacos;
           state.result += ' ' + state.service.nacosns;

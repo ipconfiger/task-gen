@@ -114,9 +114,8 @@ export default defineComponent({
             state.result += ' false';
           }
           state.result += ' ' + state.tar_ip;
-          if (state.service.max_mem != '') {
-            state.result += ' ' + state.service.max_mem + 'm';
-          }
+          if (state.service.max_mem)
+          state.result += ' ' + state.service.max_mem + 'm';
           state.result += ' ' + state.service.port;
           state.result += ' ' + state.service.nacos;
           state.result += ' ' + state.service.nacosns;
